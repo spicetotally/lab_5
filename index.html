@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    class Square { // створюємо клас Square
+        constructor(length) { // створюємо конструктор
+        this.length = length
+        }
+
+        getLength() {
+            return this.length // створюємо метод
+        }
+    }
+
+    let a = new Square(5); // створюємо об'єкт класу Square з length = 5
+
+    console.log(a.getLength()) // виводимо length для об'єкту a
+
+    class Square2 extends Square { // створюємо клас Square2, який наслідує клас Square
+        constructor() {
+            super(7)
+        }
+    }
+
+    let b = new Square2(); // створюємо об'єкт класу Square2
+
+    console.log(b.getLength()) // виводимо length для об'єкту b
+
+    console.log(b.__proto__); // виводимо прототип класу b
+
+
+    </script>
+</body>
+</html>
